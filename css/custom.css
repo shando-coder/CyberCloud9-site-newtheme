@@ -1,6 +1,6 @@
 /* =======================================
-   CyberCloud9 Custom Colors
-   Replace theme orange (#f4623a) with sky blue (#87ceeb)
+   CyberCloud9 Custom Theme
+   Replace orange (#f4623a) with sky blue (#87ceeb)
    ======================================= */
 
 /* Bootstrap variable override */
@@ -48,11 +48,6 @@ a:focus {
   border-top: 0.25rem solid #87ceeb;
 }
 
-/* Icon accents (if any use fill/stroke) */
-.svg-inline--fa {
-  color: #87ceeb;
-}
-
 /* Highlight background */
 .mark, mark {
   background-color: #87ceeb33; /* light sky blue tint */
@@ -95,4 +90,19 @@ header.masthead {
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-size: cover;
+}
+
+/* =======================================
+   Icon Fixes (keep icons visible)
+   ======================================= */
+
+/* Remove any forced blue icon color */
+.svg-inline--fa {
+  color: inherit;
+}
+
+/* Keep icons inside blue circles white */
+.bg-primary .svg-inline--fa,
+.bg-primary i {
+  color: #fff !important;
 }
