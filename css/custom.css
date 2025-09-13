@@ -1,55 +1,48 @@
 /* =======================================
    CyberCloud9 - custom.css
-   Clean sky-blue theme
+   Clean Sky Blue Theme (white background)
    ======================================= */
 
-/* Bootstrap variable override */
+/* ------------------------------
+   Bootstrap Primary Color Override
+   ------------------------------ */
 :root {
   --bs-primary: #87ceeb;
   --bs-primary-rgb: 135, 206, 235;
 }
 
-/* Text accents */
-.text-primary {
-  color: #87ceeb !important;
-}
+/* ------------------------------
+   Text & Links
+   ------------------------------ */
+.text-primary { color: #87ceeb !important; }
 
-/* Background accents */
-.bg-primary {
-  background-color: #87ceeb !important;
-}
+a { color: #87ceeb; transition: color 0.25s ease; }
+a:hover, a:focus { color: #5aa9c9; }
 
-/* Buttons */
-.btn-primary {
-  color: #fff !important;
-  background-color: #87ceeb !important;
-  border-color: #87ceeb !important;
-}
-.btn-primary:hover,
-.btn-primary:focus,
-.btn-primary:active {
-  background-color: #6bb7d7 !important;
-  border-color: #6bb7d7 !important;
-}
-
-/* Links */
-a { color: #87ceeb; }
-a:hover, a:focus { color: #6bb7d7; }
-
-/* Divider under headings */
+/* ------------------------------
+   Dividers
+   ------------------------------ */
 .divider { border-top: 0.25rem solid #87ceeb !important; }
 
-/* Highlight background */
-.mark, mark { background-color: #87ceeb33 !important; }
-
-/* Navbar active/hover */
-.navbar-light .navbar-nav .nav-link.active,
-.navbar-light .navbar-nav .nav-link:focus,
-.navbar-light .navbar-nav .nav-link:hover {
-  color: #87ceeb !important;
+/* ------------------------------
+   Buttons
+   ------------------------------ */
+.btn-primary {
+  background-color: #87ceeb !important;
+  border-color: #87ceeb !important;
+  color: #fff !important;
+  transition: background-color 0.25s ease, border-color 0.25s ease;
 }
 
-/* Masthead + CTA overlays */
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: #5aa9c9 !important;
+  border-color: #5aa9c9 !important;
+}
+
+/* ------------------------------
+   Masthead + CTA Gradients
+   ------------------------------ */
 header.masthead {
   background: linear-gradient(
       to bottom,
@@ -72,32 +65,30 @@ header.masthead {
   background-size: cover;
 }
 
-/* =======================================
-   SERVICE ICONS - white background, sky blue icon
-   ======================================= */
-#services .col-lg-3 .mb-2 {
-  width: 80px;
-  height: 80px;
-  background-color: #ffffff;  /* white circle */
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-left: auto;
-  margin-right: auto;
-  transition: background-color 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
-  border: 2px solid #87ceeb; /* optional thin border for contrast */
-}
-
+/* ------------------------------
+   Service Icons (Bootstrap Icons)
+   ------------------------------ */
 #services .col-lg-3 .mb-2 i {
-  color: #87ceeb !important;  /* sky blue icon */
+  color: #87ceeb !important;   /* sky blue icons */
   font-size: 2.5rem;
   transition: color 0.25s ease;
 }
 
-/* Hover effect: slight shading + lift */
-#services .col-lg-3 .mb-2:hover {
-  background-color: #f0f8ff; /* very light blue */
-  transform: translateY(-3px);
-  box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+/* Optional subtle hover for icons */
+#services .col-lg-3 .mb-2 i:hover {
+  color: #5aa9c9 !important;
 }
+
+/* ------------------------------
+   Navbar
+   ------------------------------ */
+.navbar-light .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .nav-link:focus,
+.navbar-light .navbar-nav .nav-link:hover {
+  color: #87ceeb !important;
+}
+
+/* ------------------------------
+   Optional Highlights
+   ------------------------------ */
+.mark, mark { background-color: #87ceeb33 !important; }
