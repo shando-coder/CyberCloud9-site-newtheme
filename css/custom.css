@@ -1,0 +1,98 @@
+/* =======================================
+   CyberCloud9 Custom Colors
+   Replace theme orange (#f4623a) with sky blue (#87ceeb)
+   ======================================= */
+
+/* Bootstrap variable override */
+:root {
+  --bs-primary: #87ceeb;
+  --bs-primary-rgb: 135, 206, 235;
+}
+
+/* Text accents */
+.text-primary {
+  color: #87ceeb !important;
+}
+
+/* Background accents */
+.bg-primary {
+  background-color: #87ceeb !important;
+}
+
+/* Buttons */
+.btn-primary {
+  color: #fff !important;
+  background-color: #87ceeb !important;
+  border-color: #87ceeb !important;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+  background-color: #6bb7d7 !important;
+  border-color: #6bb7d7 !important;
+}
+
+/* Links */
+a {
+  color: #87ceeb;
+}
+
+a:hover,
+a:focus {
+  color: #6bb7d7;
+}
+
+/* Divider (the small line under headings) */
+.divider {
+  border-top: 0.25rem solid #87ceeb;
+}
+
+/* Icon accents (if any use fill/stroke) */
+.svg-inline--fa {
+  color: #87ceeb;
+}
+
+/* Highlight background */
+.mark, mark {
+  background-color: #87ceeb33; /* light sky blue tint */
+}
+
+/* Navbar active/hover */
+.navbar-light .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .nav-link:focus,
+.navbar-light .navbar-nav .nav-link:hover {
+  color: #87ceeb !important;
+}
+
+/* =======================================
+   Gradient + Overlay Adjustments
+   ======================================= */
+
+/* Masthead gradient */
+header.masthead {
+  background: linear-gradient(
+      to bottom,
+      rgba(135, 206, 235, 0.8) 0%,
+      rgba(135, 206, 235, 0.6) 100%
+    ),
+    url("../assets/img/bg-masthead.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+}
+
+/* Call-to-action section gradient */
+.page-section.cta {
+  background: linear-gradient(
+      to bottom,
+      rgba(135, 206, 235, 0.8) 0%,
+      rgba(135, 206, 235, 0.6) 100%
+    ),
+    url("../assets/img/bg-cta.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+}
