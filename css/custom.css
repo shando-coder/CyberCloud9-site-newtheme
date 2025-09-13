@@ -49,7 +49,8 @@ a:focus {
 }
 
 /* Highlight background */
-.mark, mark {
+.mark,
+mark {
   background-color: #87ceeb33; /* light sky blue tint */
 }
 
@@ -96,13 +97,30 @@ header.masthead {
    Icon Fixes (keep icons visible)
    ======================================= */
 
-/* Remove any forced blue icon color */
+/* Don’t force all icons to be blue */
 .svg-inline--fa {
   color: inherit;
 }
 
-/* Keep icons inside blue circles white */
-.bg-primary .svg-inline--fa,
-.bg-primary i {
+/* Force icons in feature circles to be white */
+.feature.bg-primary.text-white i,
+.feature.bg-primary.text-white .svg-inline--fa,
+.bg-primary.text-white.feature i,
+.bg-primary.text-white.feature .svg-inline--fa,
+.bg-primary.text-white i.fa,
+.bg-primary.text-white i.fas,
+.bg-primary.text-white i.far,
+.bg-primary.text-white .fas,
+.bg-primary.text-white .far {
   color: #fff !important;
+}
+
+/* =======================================
+   Icon Hover Effects
+   ======================================= */
+
+/* Slightly darker blue on hover for icon circles */
+.feature.bg-primary.text-white:hover {
+  background-color: #5aa9c9 !important; /* darker sky blue */
+  transition: background-color 0.3s ease;
 }
