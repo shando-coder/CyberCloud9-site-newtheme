@@ -1,6 +1,7 @@
 /* =======================================
-   CyberCloud9 Custom Theme
-   Replace orange (#f4623a) with sky blue (#87ceeb)
+   CyberCloud9 - custom.css
+   Orange → Sky Blue
+   Includes icon circles for Bootstrap Icons
    ======================================= */
 
 /* Bootstrap variable override */
@@ -25,7 +26,6 @@
   background-color: #87ceeb !important;
   border-color: #87ceeb !important;
 }
-
 .btn-primary:hover,
 .btn-primary:focus,
 .btn-primary:active {
@@ -34,25 +34,14 @@
 }
 
 /* Links */
-a {
-  color: #87ceeb;
-}
+a { color: #87ceeb; }
+a:hover, a:focus { color: #6bb7d7; }
 
-a:hover,
-a:focus {
-  color: #6bb7d7;
-}
-
-/* Divider (the small line under headings) */
-.divider {
-  border-top: 0.25rem solid #87ceeb;
-}
+/* Divider under headings */
+.divider { border-top: 0.25rem solid #87ceeb !important; }
 
 /* Highlight background */
-.mark,
-mark {
-  background-color: #87ceeb33; /* light sky blue tint */
-}
+.mark, mark { background-color: #87ceeb33 !important; }
 
 /* Navbar active/hover */
 .navbar-light .navbar-nav .nav-link.active,
@@ -61,66 +50,59 @@ mark {
   color: #87ceeb !important;
 }
 
-/* =======================================
-   Gradient + Overlay Adjustments
-   ======================================= */
-
-/* Masthead gradient */
+/* Masthead + CTA overlays */
 header.masthead {
   background: linear-gradient(
       to bottom,
-      rgba(135, 206, 235, 0.8) 0%,
-      rgba(135, 206, 235, 0.6) 100%
+      rgba(135,206,235,0.82) 0%,
+      rgba(135,206,235,0.6) 100%
     ),
     url("../assets/img/bg-masthead.jpg");
   background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: scroll;
   background-size: cover;
 }
 
-/* Call-to-action section gradient */
 .page-section.cta {
   background: linear-gradient(
       to bottom,
-      rgba(135, 206, 235, 0.8) 0%,
-      rgba(135, 206, 235, 0.6) 100%
+      rgba(135,206,235,0.82) 0%,
+      rgba(135,206,235,0.6) 100%
     ),
     url("../assets/img/bg-cta.jpg");
   background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: scroll;
   background-size: cover;
 }
 
 /* =======================================
-   Icon Fixes (keep icons visible)
+   SERVICE ICONS - Bootstrap Icons
+   Add circle background + white icon + hover
    ======================================= */
-
-/* Don’t force all icons to be blue */
-.svg-inline--fa {
-  color: inherit;
+#services .col-lg-3 .mb-2 {
+  width: 80px;
+  height: 80px;
+  background-color: #87ceeb; /* sky blue */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  transition: background-color 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
 }
 
-/* Force icons in feature circles to be white */
-.feature.bg-primary.text-white i,
-.feature.bg-primary.text-white .svg-inline--fa,
-.bg-primary.text-white.feature i,
-.bg-primary.text-white.feature .svg-inline--fa,
-.bg-primary.text-white i.fa,
-.bg-primary.text-white i.fas,
-.bg-primary.text-white i.far,
-.bg-primary.text-white .fas,
-.bg-primary.text-white .far {
+#services .col-lg-3 .mb-2 i {
   color: #fff !important;
+  font-size: 2.5rem;
 }
 
-/* =======================================
-   Icon Hover Effects
-   ======================================= */
+/* Hover effect */
+#services .col-lg-3 .mb-2:hover {
+  background-color: #5aa9c9;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+}
 
-/* Slightly darker blue on hover for icon circles */
-.feature.bg-primary.text-white:hover {
-  background-color: #5aa9c9 !important; /* darker sky blue */
-  transition: background-color 0.3s ease;
+/* Optional: adjust spacing if circle height is larger */
+#services .col-lg-3 .mt-5 {
+  margin-top: 3rem !important;
 }
