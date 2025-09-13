@@ -1,7 +1,7 @@
 /* =======================================
    CyberCloud9 - custom.css
-   Orange → Sky Blue
-   Includes icon circles for Bootstrap Icons
+   Orange → Sky Blue, Bootstrap Icons circles
+   Pure CSS solution (no HTML changes)
    ======================================= */
 
 /* Bootstrap variable override */
@@ -74,35 +74,36 @@ header.masthead {
 }
 
 /* =======================================
-   SERVICE ICONS - Bootstrap Icons
-   Add circle background + white icon + hover
+   SERVICE ICONS - pure CSS circles behind icons
    ======================================= */
 #services .col-lg-3 .mb-2 {
+  position: relative;
+  display: inline-block;
+}
+
+#services .col-lg-3 .mb-2 i::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
   width: 80px;
   height: 80px;
-  background-color: #87ceeb; /* sky blue */
+  background-color: #87ceeb; /* sky blue circle */
   border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-left: auto;
-  margin-right: auto;
+  transform: translate(-50%, -50%);
+  z-index: -1;
   transition: background-color 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
+}
+
+#services .col-lg-3 .mb-2:hover i::before {
+  background-color: #5aa9c9; /* darker sky blue */
+  transform: translate(-50%, -50%) translateY(-3px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.08);
 }
 
 #services .col-lg-3 .mb-2 i {
   color: #fff !important;
+  position: relative;
+  z-index: 1;
   font-size: 2.5rem;
-}
-
-/* Hover effect */
-#services .col-lg-3 .mb-2:hover {
-  background-color: #5aa9c9;
-  transform: translateY(-3px);
-  box-shadow: 0 8px 18px rgba(0,0,0,0.08);
-}
-
-/* Optional: adjust spacing if circle height is larger */
-#services .col-lg-3 .mt-5 {
-  margin-top: 3rem !important;
 }
