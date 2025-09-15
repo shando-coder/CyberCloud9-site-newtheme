@@ -193,3 +193,10 @@ header.masthead {
   margin-top: 15px;
   font-weight: bold;
 }
+
+/* ------------------------------
+   About Section Text
+   ------------------------------ */
+#about p {
+  color: #1c1c1c !important;
+}
