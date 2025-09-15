@@ -1,1 +1,123 @@
+/* =======================================
+   CyberCloud9 - custom.css
+   Clean Sky Blue Theme (white background)
+   ======================================= */
 
+/* ------------------------------
+   Bootstrap Primary Color Override
+   ------------------------------ */
+:root {
+  --bs-primary: #87ceeb;
+  --bs-primary-rgb: 135, 206, 235;
+  --bs-primary-dark: #5aa9c9;
+}
+
+/* ------------------------------
+   Text & Links
+   ------------------------------ */
+.text-primary { color: var(--bs-primary) !important; }
+
+a { color: var(--bs-primary); transition: color 0.25s ease; }
+a:hover, a:focus { color: var(--bs-primary-dark); }
+
+/* ------------------------------
+   Dividers
+   ------------------------------ */
+.divider { border-top: 0.25rem solid var(--bs-primary) !important; }
+
+/* ------------------------------
+   Buttons
+   ------------------------------ */
+.btn-primary {
+  background-color: var(--bs-primary) !important;
+  border-color: var(--bs-primary) !important;
+  color: #fff !important;
+  transition: background-color 0.25s ease, border-color 0.25s ease;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: var(--bs-primary-dark) !important;
+  border-color: var(--bs-primary-dark) !important;
+  color: #fff !important;
+}
+
+/* Fix for btn-light so text isn’t invisible */
+.btn-light {
+  background-color: #fff !important;
+  border-color: #fff !important;
+  color: var(--bs-primary) !important;
+}
+.btn-light:hover,
+.btn-light:focus {
+  background-color: #f8f9fa !important;
+  border-color: #f8f9fa !important;
+  color: var(--bs-primary-dark) !important;
+}
+
+/* ------------------------------
+   Masthead + CTA Gradients
+   ------------------------------ */
+header.masthead {
+  background: linear-gradient(
+      to bottom,
+      rgba(135,206,235,0.82) 0%,
+      rgba(135,206,235,0.6) 100%
+    ),
+    url("../assets/img/bg-masthead.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.page-section.cta {
+  background: linear-gradient(
+      to bottom,
+      rgba(135,206,235,0.82) 0%,
+      rgba(135,206,235,0.6) 100%
+    ),
+    url("../assets/img/bg-cta.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+/* ------------------------------
+   Service Icons (Bootstrap Icons)
+   ------------------------------ */
+#services i {
+  background: transparent !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  border: none !important;
+  border-radius: 0 !important;
+  color: var(--bs-primary) !important;
+  font-size: 2.5rem;
+  transition: color 0.25s ease;
+}
+
+#services i:hover {
+  color: var(--bs-primary-dark) !important;
+}
+
+/* ------------------------------
+   Navbar
+   ------------------------------ */
+.navbar-light .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .nav-link:focus,
+.navbar-light .navbar-nav .nav-link:hover {
+  color: var(--bs-primary) !important;
+}
+
+/* ------------------------------
+   Optional Highlights
+   ------------------------------ */
+.mark, mark { background-color: #87ceeb33 !important; }
+
+/* ------------------------------
+   Form Section
+   ------------------------------ */
+form {
+  background-color: var(--bs-primary) !important;
+  color: #fff !important;
+  padding: 2rem;
+  border-radius: 0.5rem;
+}
