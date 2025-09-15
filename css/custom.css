@@ -204,3 +204,8 @@ header.masthead .masthead-subheading,
 header.masthead .masthead-heading {
   color: #fff !important;
 }
+.masthead-text {
+    color: #fff;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+
