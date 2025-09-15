@@ -128,7 +128,7 @@
   method="POST"
   style="max-width: 500px; margin: 50px auto; padding: 30px; background-color: #87ceeb; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); font-family: Arial, sans-serif;"
 >
-  <h2 style="text-align:center; margin-bottom: 25px; color: #1a73e8;">Contact Us</h2>
+  <h2 style="text-align:center; margin-bottom: 25px; color: #ffffff;">Contact Us</h2>
 
   <label for="name" style="display:block; margin-bottom:5px; font-weight: bold; color: #333;">Your Name</label>
   <input type="text" id="name" name="name" placeholder="Your Name" required
@@ -171,7 +171,7 @@ form.addEventListener('submit', async function(event) {
     });
 
     if (response.ok) {
-      status.style.color = 'green';
+      status.style.color = 'blue';
       status.textContent = 'Thanks! Your message has been sent.';
       form.reset();
     } else {
