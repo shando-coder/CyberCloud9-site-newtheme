@@ -7,88 +7,35 @@
    Bootstrap Primary Color Override
    ------------------------------ */
 :root {
-  --bs-primary: #87ceeb;
+  --bs-primary: #87ceeb;             /* Sky Blue */
   --bs-primary-rgb: 135, 206, 235;
+  --bs-primary-dark: #5aa9c9;        /* Darker Sky Blue for hover */
 }
 
 /* ------------------------------
    Text & Links
    ------------------------------ */
-.text-primary { color: #87ceeb !important; }
+.text-primary { color: var(--bs-primary) !important; }
 
-a { color: #87ceeb; transition: color 0.25s ease; }
-a:hover, a:focus { color: #5aa9c9; }
+a {
+  color: var(--bs-primary);
+  transition: color 0.25s ease;
+}
+a:hover,
+a:focus {
+  color: var(--bs-primary-dark);
+}
 
 /* ------------------------------
    Dividers
    ------------------------------ */
-.divider { border-top: 0.25rem solid #87ceeb !important; }
+.divider {
+  border-top: 0.25rem solid var(--bs-primary) !important;
+}
 
 /* ------------------------------
    Buttons
    ------------------------------ */
 .btn-primary {
-  background-color: #87ceeb !important;
-  border-color: #87ceeb !important;
-  color: #fff !important;
-  transition: background-color 0.25s ease, border-color 0.25s ease;
-}
-
-.btn-primary:hover,
-.btn-primary:focus {
-  background-color: #5aa9c9 !important;
-  border-color: #5aa9c9 !important;
-}
-
-/* ------------------------------
-   Masthead + CTA Gradients
-   ------------------------------ */
-header.masthead {
-  background: linear-gradient(
-      to bottom,
-      rgba(135,206,235,0.82) 0%,
-      rgba(135,206,235,0.6) 100%
-    ),
-    url("../assets/img/bg-masthead.jpg");
-  background-position: center;
-  background-size: cover;
-}
-
-.page-section.cta {
-  background: linear-gradient(
-      to bottom,
-      rgba(135,206,235,0.82) 0%,
-      rgba(135,206,235,0.6) 100%
-    ),
-    url("../assets/img/bg-cta.jpg");
-  background-position: center;
-  background-size: cover;
-}
-
-/* ------------------------------
-   Service Icons (Bootstrap Icons)
-   ------------------------------ */
-#services .col-lg-3 .mb-2 i {
-  color: #87ceeb !important;  /* sky blue icons */
-  font-size: 2.5rem;
-  transition: color 0.25s ease;
-}
-
-/* Optional subtle hover effect for icons */
-#services .col-lg-3 .mb-2 i:hover {
-  color: #5aa9c9 !important; /* slightly darker sky blue */
-}
-
-/* ------------------------------
-   Navbar
-   ------------------------------ */
-.navbar-light .navbar-nav .nav-link.active,
-.navbar-light .navbar-nav .nav-link:focus,
-.navbar-light .navbar-nav .nav-link:hover {
-  color: #87ceeb !important;
-}
-
-/* ------------------------------
-   Optional Highlights
-   ------------------------------ */
-.mark, mark { background-color: #87ceeb33 !important; }
+  background-color: var(--bs-primary) !important;
+  border-color: var(--bs-pr
