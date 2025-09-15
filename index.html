@@ -126,32 +126,21 @@
   id="contact-form"
   action="https://formspree.io/f/xyzdjjro"
   method="POST"
-  style="max-width: 500px; margin: 50px auto; padding: 30px; background-color: #f5f7fa; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); font-family: Arial, sans-serif;"
 >
-  <h2 style="text-align:center; margin-bottom: 25px; color: #1a73e8;">Contact Us</h2>
+  <h2>Contact Us</h2>
 
-  <label for="name" style="display:block; margin-bottom:5px; font-weight: bold; color: #333;">Your Name</label>
-  <input type="text" id="name" name="name" placeholder="Your Name" required
-    style="width: 100%; padding: 12px; margin-bottom: 20px; border-radius: 8px; border: 1px solid #ccc; font-size: 16px; transition: border-color 0.3s;"
-    onfocus="this.style.borderColor='#1a73e8'" onblur="this.style.borderColor='#ccc'">
+  <label for="name">Your Name</label>
+  <input type="text" id="name" name="name" placeholder="Your Name" required>
 
-  <label for="email" style="display:block; margin-bottom:5px; font-weight: bold; color: #333;">Your Email</label>
-  <input type="email" id="email" name="email" placeholder="you@example.com" required
-    style="width: 100%; padding: 12px; margin-bottom: 20px; border-radius: 8px; border: 1px solid #ccc; font-size: 16px; transition: border-color 0.3s;"
-    onfocus="this.style.borderColor='#1a73e8'" onblur="this.style.borderColor='#ccc'">
+  <label for="email">Your Email</label>
+  <input type="email" id="email" name="email" placeholder="you@example.com" required>
 
-  <label for="message" style="display:block; margin-bottom:5px; font-weight: bold; color: #333;">Your Message</label>
-  <textarea id="message" name="message" placeholder="Type your message here..." rows="6" required
-    style="width: 100%; padding: 12px; margin-bottom: 25px; border-radius: 8px; border: 1px solid #ccc; font-size: 16px; resize: vertical; transition: border-color 0.3s;"
-    onfocus="this.style.borderColor='#1a73e8'" onblur="this.style.borderColor='#ccc'"></textarea>
+  <label for="message">Your Message</label>
+  <textarea id="message" name="message" placeholder="Type your message here..." rows="6" required></textarea>
 
-  <button type="submit"
-    style="width: 100%; padding: 14px; background-color: #1a73e8; color: #fff; border: none; border-radius: 8px; font-size: 18px; font-weight: bold; cursor: pointer; transition: background-color 0.3s;"
-    onmouseover="this.style.backgroundColor='#1666c1'" onmouseout="this.style.backgroundColor='#1a73e8'">
-    Send Message
-  </button>
+  <button type="submit">Send Message</button>
 
-  <p id="form-status" style="text-align:center; margin-top: 15px; font-weight: bold;"></p>
+  <p id="form-status"></p>
 </form>
 
 <script>
@@ -171,7 +160,7 @@ form.addEventListener('submit', async function(event) {
     });
 
     if (response.ok) {
-      status.style.color = 'green';
+      status.style.color = 'blue';
       status.textContent = 'Thanks! Your message has been sent.';
       form.reset();
     } else {
@@ -185,6 +174,7 @@ form.addEventListener('submit', async function(event) {
   }
 });
 </script>
+
 
 
 
