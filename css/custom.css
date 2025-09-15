@@ -200,3 +200,7 @@ header.masthead {
 #about p {
   color: #1c1c1c !important;
 }
+header.masthead .masthead-subheading,
+header.masthead .masthead-heading {
+  color: #fff !important;
+}
